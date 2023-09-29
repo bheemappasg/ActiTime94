@@ -1,0 +1,18 @@
+package com.zoho.testscript;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DemoZoho {
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://192.168.230.128:8080/crm/HomePage.do");
+		driver.findElement(By.id("userName")).sendKeys("rashmi@dell");
+		driver.findElement(By.id("passWord")).sendKeys("123456");
+		driver.findElement(By.linkText("Sign In")).click();
+
+	}
+
+}
